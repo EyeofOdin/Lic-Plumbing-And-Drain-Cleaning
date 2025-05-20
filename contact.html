@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact LIC Plumbing And Drain Cleaning for all your plumbing needs in Long Island City, NY. Schedule service, request a quote, or inquire about our plumbing solutions.">
+    <title>Contact Us | LIC Plumbing And Drain Cleaning</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/lic-plumbing-logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 86, 179, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .contact-card p {
+            color: var(--grey-color);
+            margin-bottom: 10px;
+        }
+        
+        .contact-card a {
+            font-weight: 500;
+        }
+        
+        .contact-form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+        
+        .contact-form-container h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-col {
+            margin-bottom: 20px;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .emergency {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .emergency h2 {
+            margin-bottom: 15px;
+        }
+        
+        .emergency p {
+            margin-bottom: 20px;
+        }
+        
+        .emergency .btn {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+        
+        .emergency .btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .faq-section {
+            margin-top: 80px;
+        }
+        
+        .faq-container {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(0, 86, 179, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 300px;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/lic-plumbing-logo.png" alt="LIC Plumbing Logo">
+                    <h1>LIC Plumbing</h1>
+                </div>
+                
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="index.html#why-us" class="nav-link">Why Choose Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <div class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(718) 269-6422</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="hero" style="padding: 100px 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in touch with LIC Plumbing And Drain Cleaning for all your plumbing needs in Long Island City and throughout Queens, NY</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Info Cards -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>For immediate assistance or to schedule service</p>
+                    <p><a href="tel:7182696422">(718) 269-6422</a></p>
+                    <p>24/7 Emergency Service Available</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us a message for quotes or inquiries</p>
+                    <p><a href="mailto:info@licplumbing.com">info@licplumbing.com</a></p>
+                    <p>We respond to all emails within 24 hours</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>5-16 51st Ave</p>
+                    <p>Long Island City, NY 11101</p>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-col">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Your phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Your email" required>
+                        </div>
+                        
+                        <div class="form-col">
+                            <label for="service">Service Needed</label>
+                            <select id="service" required>
+                                <option value="">Select a service</option>
+                                <option value="Drain Cleaning">Drain Cleaning</option>
+                                <option value="Water Heater">Water Heater Services</option>
+                                <option value="Sewer Line">Sewer Line Repair</option>
+                                <option value="Pipe Repair">Pipe Repair & Replacement</option>
+                                <option value="Bathroom">Bathroom Plumbing</option>
+                                <option value="Kitchen">Kitchen Plumbing</option>
+                                <option value="Fixture">Fixture Installation</option>
+                                <option value="Emergency">Emergency Service</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-col">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us about your plumbing needs" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-col" style="text-align: center;">
+                        <button type="submit" class="btn">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Map Section -->
+            <div style="margin-bottom: 50px;">
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-subtitle">Find us in the heart of Long Island City</p>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8132153053257!2d-73.95652442345609!3d40.743824971388805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2592385a3a271%3A0x3cb177e390d2492!2s5-16%2051st%20Ave%2C%20Long%20Island%20City%2C%20NY%2011101!5e0!3m2!1sen!2sus!4v1684536345331!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <!-- Service Areas -->
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Our Service Areas</h2>
+                <p class="section-subtitle">We proudly serve the following areas in New York City</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px;">
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Long Island City</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Astoria</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Sunnyside</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Woodside</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Jackson Heights</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Elmhurst</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Corona</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Flushing</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Forest Hills</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Rego Park</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Ridgewood</div>
+                    <div style="background: #f5f5f5; padding: 15px 25px; border-radius: 5px; font-weight: 500;">Glendale</div>
+                </div>
+                
+                <p style="margin-top: 20px;">Not sure if we service your area? <a href="tel:7182696422" style="font-weight: 500;">Give us a call</a> to find out!</p>
+            </div>
+            
+            <!-- Emergency Service Section -->
+            <div class="emergency">
+                <h2>Plumbing Emergency?</h2>
+                <p>We provide 24/7 emergency plumbing services for urgent situations like burst pipes, severe leaks, sewer backups, and other plumbing emergencies that can't wait.</p>
+                <a href="tel:7182696422" class="btn">Call Now: (718) 269-6422</a>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our services</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer free estimates?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide free estimates for most plumbing projects. For some complex jobs, we may need to conduct an inspection first to give you an accurate quote. We always provide upfront pricing before beginning any work.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How quickly can you respond to emergency calls?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For emergency situations, we typically respond within 1-2 hours. Our emergency service is available 24/7, including weekends and holidays. We understand that plumbing emergencies can cause significant damage if not addressed promptly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are your plumbers licensed and insured?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all our plumbers are fully licensed, insured, and bonded. We comply with all local regulations and codes, and our work is guaranteed. We maintain proper insurance coverage to protect both our employees and your property.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer warranties on your services?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we stand behind our work with warranties. Most repairs come with a 90-day warranty on labor, while installations typically include a 1-year warranty on both parts and labor. Manufacturer warranties may also apply to new fixtures and equipment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What forms of payment do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept multiple payment methods including cash, checks, all major credit cards, and electronic payments. For larger projects, we can also discuss payment plans. Payment is typically due upon completion of the service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>LIC Plumbing And Drain Cleaning is a trusted plumbing service provider in Long Island City, NY. We offer reliable plumbing solutions for residential and commercial clients.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Drain Cleaning</a></li>
+                        <li><a href="services.html">Water Heater Services</a></li>
+                        <li><a href="services.html">Sewer Line Repair</a></li>
+                        <li><a href="services.html">Pipe Repair & Replacement</a></li>
+                        <li><a href="services.html">Bathroom & Kitchen Plumbing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#why-us">Why Choose Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 5-16 51st Ave, Long Island City, NY 11101</p>
+                    <p><i class="fas fa-phone-alt"></i> (718) 269-6422</p>
+                    <p><i class="fas fa-envelope"></i> info@licplumbing.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-5PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LIC Plumbing And Drain Cleaning. All Rights Reserved. | Designed by Scout AI</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" style="position: fixed; bottom: 20px; right: 20px; background-color: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 20px; opacity: 0; visibility: hidden; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class on clicked item
+                    item.classList.toggle('active');
+                    
+                    // Close other open FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

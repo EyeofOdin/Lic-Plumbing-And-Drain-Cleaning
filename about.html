@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about LIC Plumbing And Drain Cleaning, a trusted plumbing service provider in Long Island City, NY with years of experience and commitment to customer satisfaction.">
+    <title>About Us | LIC Plumbing And Drain Cleaning</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/lic-plumbing-logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .about-page-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .about-page-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .about-page-text h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-page-text p {
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--light-color);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--light-color);
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--light-color);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--light-color) transparent transparent;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--light-color);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-year {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .team-section {
+            margin-top: 80px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--light-color);
+        }
+        
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .team-member p {
+            color: var(--grey-color);
+            margin-bottom: 15px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .team-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-item {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .value-title {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about-page-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-page-image {
+                order: -1;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid var(--light-color);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--light-color) transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/lic-plumbing-logo.png" alt="LIC Plumbing Logo">
+                    <h1>LIC Plumbing</h1>
+                </div>
+                
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="index.html#why-us" class="nav-link">Why Choose Us</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(718) 269-6422</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="hero" style="padding: 100px 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>About Our Company</h1>
+                <p>Learn more about LIC Plumbing And Drain Cleaning, our history, values, and commitment to quality service</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-page-content">
+                <div class="about-page-text">
+                    <h2>Our Story</h2>
+                    <p>LIC Plumbing And Drain Cleaning was established with a simple mission: to provide reliable, high-quality plumbing services to the Long Island City community and surrounding areas. What began as a small operation has grown into a trusted plumbing company with a reputation for excellence.</p>
+                    <p>Our founder began his career as an apprentice plumber, learning the trade from the ground up. After gaining years of experience working for various plumbing companies in New York, he decided to start his own business that would emphasize quality workmanship, honest pricing, and exceptional customer service.</p>
+                    <p>Today, LIC Plumbing And Drain Cleaning is staffed by a team of highly skilled plumbers who share our commitment to excellence. We've built our reputation one satisfied customer at a time, and we're proud to be the plumbing company of choice for many residents and businesses in Queens, NY.</p>
+                    <p>Throughout our growth, we've remained true to our core values: integrity, quality, reliability, and customer satisfaction. These principles guide every aspect of our business, from how we train our technicians to how we interact with our customers.</p>
+                </div>
+                
+                <div class="about-page-image">
+                    <img src="images/plumbing-banner.png" alt="LIC Plumbing Team at Work">
+                </div>
+            </div>
+            
+            <!-- Company Timeline -->
+            <h2 class="section-title">Our Journey</h2>
+            <p class="section-subtitle">Key milestones in the history of LIC Plumbing And Drain Cleaning</p>
+            
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3>Company Founded</h3>
+                        <p>LIC Plumbing And Drain Cleaning was established in Long Island City, NY with a small team of experienced plumbers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2013</div>
+                        <h3>Service Expansion</h3>
+                        <p>Expanded our service area to include all of Queens and parts of Brooklyn, and added commercial plumbing services to our offerings.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2016</div>
+                        <h3>Technology Investment</h3>
+                        <p>Invested in advanced diagnostic equipment including video inspection cameras and hydro jetting technology to better serve our customers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h3>Team Growth</h3>
+                        <p>Doubled our team size to meet growing demand and reduce response times for emergency services.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>Service Excellence Award</h3>
+                        <p>Received recognition for outstanding service quality and customer satisfaction in the local business community.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>Present Day</h3>
+                        <p>Continuing to grow while maintaining our commitment to quality service, honest pricing, and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Values Section -->
+            <div class="values-section" style="margin-top: 80px;">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">Principles that guide everything we do at LIC Plumbing And Drain Cleaning</p>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Integrity</h3>
+                        <p>We conduct our business with honesty and transparency. Our customers can trust us to provide honest assessments and fair pricing without unnecessary upselling.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="value-title">Quality</h3>
+                        <p>We take pride in our workmanship and use only high-quality materials and parts. We stand behind our work with warranties and guarantees.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="value-title">Reliability</h3>
+                        <p>Our customers can count on us to be there when we say we will. We respect your time and strive to provide prompt, efficient service.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Customer Satisfaction</h3>
+                        <p>Your satisfaction is our top priority. We aren't happy until you're happy, and we go the extra mile to ensure a positive experience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Team Section -->
+            <div class="team-section">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">The skilled professionals behind LIC Plumbing And Drain Cleaning</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="images/water-heater.png" alt="Team Member - John Smith">
+                        <h3>John Smith</h3>
+                        <p>Master Plumber, Founder</p>
+                        <p>With over 20 years of experience, John leads our team with expertise in all aspects of plumbing and drain cleaning.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="images/drain-cleaning.png" alt="Team Member - Mike Johnson">
+                        <h3>Mike Johnson</h3>
+                        <p>Senior Plumber</p>
+                        <p>Mike specializes in drain cleaning and sewer line repairs, with particular expertise in camera inspections and diagnostics.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="images/sewer-repair.png" alt="Team Member - Robert Garcia">
+                        <h3>Robert Garcia</h3>
+                        <p>Plumbing Specialist</p>
+                        <p>Robert's expertise is in water heater installation and repair, helping customers find the most efficient solutions for their needs.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="images/lic-plumbing-logo.png" alt="Team Member - Lisa Chen">
+                        <h3>Lisa Chen</h3>
+                        <p>Customer Service Manager</p>
+                        <p>Lisa ensures our customers receive exceptional service from their first call through project completion and follow-up.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications Section -->
+            <div style="margin-top: 80px; text-align: center;">
+                <h2 class="section-title">Our Credentials</h2>
+                <p class="section-subtitle">Licensed, insured, and certified for your peace of mind</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 200px; text-align: center;">
+                        <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px;">Licensed</h3>
+                        <p>NYC Master Plumber License</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 200px; text-align: center;">
+                        <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px;">Insured</h3>
+                        <p>Fully insured & bonded</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 200px; text-align: center;">
+                        <i class="fas fa-award" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px;">Certified</h3>
+                        <p>Certified master plumbers</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 200px; text-align: center;">
+                        <i class="fas fa-graduation-cap" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 10px;">Trained</h3>
+                        <p>Ongoing professional development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience Our Quality Service?</h2>
+            <p>Contact us today to schedule an appointment with our professional team. We look forward to serving your plumbing needs with the same dedication and quality that has earned us the trust of countless customers.</p>
+            <a href="index.html#contact" class="btn">Contact Us Now</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>LIC Plumbing And Drain Cleaning is a trusted plumbing service provider in Long Island City, NY. We offer reliable plumbing solutions for residential and commercial clients.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Drain Cleaning</a></li>
+                        <li><a href="services.html">Water Heater Services</a></li>
+                        <li><a href="services.html">Sewer Line Repair</a></li>
+                        <li><a href="services.html">Pipe Repair & Replacement</a></li>
+                        <li><a href="services.html">Bathroom & Kitchen Plumbing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#why-us">Why Choose Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 5-16 51st Ave, Long Island City, NY 11101</p>
+                    <p><i class="fas fa-phone-alt"></i> (718) 269-6422</p>
+                    <p><i class="fas fa-envelope"></i> info@licplumbing.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-5PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LIC Plumbing And Drain Cleaning. All Rights Reserved. | Designed by Scout AI</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" style="position: fixed; bottom: 20px; right: 20px; background-color: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 20px; opacity: 0; visibility: hidden; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
